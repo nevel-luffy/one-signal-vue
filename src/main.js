@@ -11,7 +11,7 @@ new Vue({
   render: h => h(App),
   beforeMount() {
     this.$OneSignal.init({
-      appId: "<You OneSignal application identifier",
+      appId: "32129047-423e-4597-a816-b8bf704f4db9",
       allowLocalhostAsSecureOrigin: true,
     });
   },

@@ -15,8 +15,12 @@ export default {
   components: {
     HelloWorld,
   },
-  beforeCreate() {
-    this.$OneSignal.showSlidedownPrompt();
+  async beforeCreate() {
+    window.OneSignal = window.OneSignal || [];
+    window.OneSignal.push(() => {
+      window.OneSignal.setExternalUserId("test_segment2")
+      window.OneSignal.sendTag("role", "end_user")
+    });
   },
 };
 </script>
